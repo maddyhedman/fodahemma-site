@@ -1,10 +1,12 @@
+import Container from "./Container"
 const HomeComponent = () => {
     return (
-        <div>
-            <main className="bg-green text-yellow">
-                <h1 className="">Home Component</h1>
-            </main>
-            
+        <div className="bg-green py-10">
+            <Container>
+                <main className="">
+                    <h1 className="text-3xl font-serif">Home Component</h1>
+                </main>
+            </Container>
         </div>
     )
 }

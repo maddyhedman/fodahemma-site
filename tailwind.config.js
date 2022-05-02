@@ -23,7 +23,8 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      serif: ['Ogg', 'serif'],
+
     },
     extend: {
       spacing: {

@@ -4,12 +4,13 @@ import { gql } from "@apollo/client";
 import client from "../apollo-client";
 
 import HomeComponent from "../components/HomeComponent";
+import NavBar from "../components/Navbar";
 
 export default function Home({ countries }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Föda Hemma</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeComponent/>
