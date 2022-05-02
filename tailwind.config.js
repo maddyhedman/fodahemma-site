@@ -20,8 +20,8 @@ module.exports = {
       green: "#32533D",
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Ogg', 'serif'],
     },
     extend: {
       spacing: {

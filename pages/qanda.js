@@ -3,4 +3,4 @@ function QandA() {
     }
     
     
-    export default QandA
+export default QandA
