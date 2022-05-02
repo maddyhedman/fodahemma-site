@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Container from "./Container"
-
+import Dropwdown from "./DropdownComponent"
 
 const NavBar = () => {
 return (
@@ -12,11 +12,12 @@ return (
                         <Link href="/">Föda Hemma</Link>
                     </h1>
                 </div>
-                <div>
-                    <ul className="flex justify-end gap-24">
+                <div className="">
+                    <ul className="lg:flex justify-end gap-24 hidden">
                         <li><Link href="/barnmorskor">Barnmorskor</Link></li>
                         <li><Link href="/qanda">Q&A</Link></li>
                     </ul>
+                    <Dropwdown />
                 </div>
             </nav>
         </Container>
