@@ -1,39 +1,36 @@
 module.exports = {
-  content: [   
-    "./pages/**/*.{js,ts,jsx,tsx}",   
-    "./components/**/*.{js,ts,jsx,tsx}",  
-     ],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
     },
     colors: {
-      'blue': '#1fb6ff',
-      'purple': '#7e5bef',
-      'pink': '#ff49db',
-      'orange': '#ff7849',
-      'yellow': '#ffc82c',
-      'gray-dark': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
-      'green': '#32533D',
+      brown: "#7A6263",
+      purple: "#9BA2FF",
+      beige: "#D1C2B5",
+      "gray-dark": "#273444",
+      gray: "#8492a6",
+      "gray-light": "#d3dce6",
+      green: "#32533D",
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Ogg', 'serif'],
-
     },
     extend: {
       spacing: {
-        '128': '32rem',
-        '144': '36rem',
+        128: "32rem",
+        144: "36rem",
       },
       borderRadius: {
-        '4xl': '2rem',
-      }
-    }
-  }
-}
+        "4xl": "2rem",
+      },
+    },
+  },
+};
