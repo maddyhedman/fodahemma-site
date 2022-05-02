@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Ogg";
+  font-display: auto;
+  src: url("/fonts/Ogg-Roman.otf") format("truetype");
+  font-style: bold;
+  font-weight: 800;
+  font-display: swap;
+}
