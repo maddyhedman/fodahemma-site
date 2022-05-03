@@ -1,11 +1,31 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { gql } from "@apollo/client";
-import client from "../apollo-client";
+import { createClient } from "contentful";
 
 import HomeComponent from "../components/HomeComponent";
 
-export default function Home({ countries }) {
+
+export async function getStaticProps() {
+
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  })
+
+  const profil = await client.getEntries({content_type: 'profil'})
+  const homePage = await client.getEntries({content_type: 'homePage'})
+
+  return {
+    props: {
+      midwives: profil.items,
+      homePage: homePage.items
+    }
+  }
+}
+
+
+export default function Home({ midwives, homePage }) {
+  console.log(homePage);
   return (
     <div className={styles.container}>
       <Head>
@@ -15,24 +35,4 @@ export default function Home({ countries }) {
       <HomeComponent />
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const { data } = await client.query({
-    query: gql`
-      query Countries {
-        countries {
-          code
-          name
-          emoji
-        }
-      }
-    `,
-  });
-
-  return {
-    props: {
-      countries: data.countries.slice(0, 4),
-    },
-  };
 }
