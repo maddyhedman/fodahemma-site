@@ -12,8 +12,7 @@ export default function Home({ countries }) {
         <title>Föda Hemma</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomeComponent/>
-
+      <HomeComponent />
     </div>
   );
 }
