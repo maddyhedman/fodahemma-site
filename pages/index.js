@@ -1,7 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+
 import { createClient } from "contentful";
 import HomeComponent from "../components/HomeComponent";
+
 
 export async function getStaticProps() {
   const client = createClient({
