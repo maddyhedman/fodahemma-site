@@ -14,10 +14,11 @@ module.exports = {
       brown: "#7A6263",
       purple: "#9BA2FF",
       beige: "#D1C2B5",
-      "gray-dark": "#273444",
+      grayDark: "#273444",
       gray: "#8492a6",
-      "gray-light": "#d3dce6",
+      grayLight: "#d3dce6",
       green: "#32533D",
+      white: "#FFFFFF",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
