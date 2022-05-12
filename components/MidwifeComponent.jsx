@@ -4,7 +4,7 @@ const MidwifeComponent = ({ midwife }) => {
   return (
     <div>
       <Container>
-        <h1 className="font-serif text-purple text-center mt-20 text-5xl">{midwife.title}</h1>
+        <h1 className="font-serif text-center mt-20 text-5xl">{midwife.title}</h1>
         <div>
           <p className="text-right">Filtrera efter län</p>
           <div></div>
