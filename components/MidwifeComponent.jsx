@@ -1,6 +1,6 @@
 const MidwifeComponent = ({ midwife }) => {
   return (
-    <div className="maddy">
+    <div>
       <h1 className="font-serif text-purple text-center">{midwife.title}</h1>
       <div className="grid grid-cols-3 gap-x-20 gap-y-10 py-20 px-10 ">
         {midwife &&
