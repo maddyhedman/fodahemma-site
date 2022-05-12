@@ -1,5 +1,4 @@
 const MidwifeComponent = ({ midwife }) => {
-  console.log(midwife);
   return (
     <div className="bg-purple h-screen py-10">
       <h1 className="font-serif text-white text-center">{midwife.title}</h1>

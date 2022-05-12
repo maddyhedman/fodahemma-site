@@ -5,7 +5,6 @@ import Button from "../components/Button";
 
 const HomeComponent = ({ home }) => {
   const homePage = home[0].fields;
-  console.log("ctaLeft:", homePage.ctaLeft.fields.title);
   return (
     <div className="bg-green py-10 h-screen">
       <Container>

@@ -1,7 +1,6 @@
 import Container from "./Container";
 
 const QandAComponent = ({ qanda }) => {
-  console.log(qanda);
   return (
     <div className="bg-green h-screen py-10">
       <Container>
