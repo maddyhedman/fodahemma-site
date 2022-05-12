@@ -1,5 +1,5 @@
-@tailwind base; 
-@tailwind components; 
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 html,
@@ -17,6 +17,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.midwife-container:nth-child(1n) {
+  background-color: #32533d;
+}
+.midwife-container:nth-child(3n) {
+  background-color: #9ba2ff;
+}
+
+.midwife-container:nth-child(2n) {
+  background-color: #d1c2b5;
 }
 
 @font-face {
