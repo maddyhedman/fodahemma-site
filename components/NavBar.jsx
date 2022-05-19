@@ -12,17 +12,17 @@ const NavBar = () => {
               <Link href="/">Föda Hemma</Link>
             </h1>
           </div>
-          <div className="flex justify-end">
-            <ul className="lg:flex justify-end gap-24 hidden">
-              <li>
-                <Link href="/barnmorskor">Barnmorskor</Link>
-              </li>
-              <li>
-                <Link href="/qanda">Q&A</Link>
-              </li>
-            </ul>
-            <Dropwdown />
-          </div>
+            <div className="flex justify-end">
+              <ul className="lg:flex justify-end gap-24 hidden">
+                <li>
+                  <Link href="/barnmorskor">Barnmorskor</Link>
+                </li>
+                <li>
+                  <Link href="/qanda">Q&A</Link>
+                </li>
+              </ul>
+              <Dropwdown />
+            </div>
         </nav>
       </Container>
     </div>
