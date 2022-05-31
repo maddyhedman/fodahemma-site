@@ -18,7 +18,6 @@ const HomeComponent = ({ home }) => {
           </h1>
           <div className="flex justify-between w-35">
             <Button
-              href="/barnmorskor"
               className="mr-10"
               homeButtonTitle={homePage.ctaLeft.fields.title}
             />
