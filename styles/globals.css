@@ -18,17 +18,20 @@ a {
 * {
   box-sizing: border-box;
 }
-.midwife-container:nth-child(1n) {
+.midwife-container:nth-child(3n-2) {
   background-color: #32533d;
+  border-top-left-radius: 3rem;
+  color: #d1c2b5;
+}
+.midwife-container:nth-child(3n-1) {
+  background-color: #d1c2b5;
+  color: #32533d;
 }
 .midwife-container:nth-child(3n) {
   background-color: #9ba2ff;
+  border-bottom-right-radius: 3rem;
+  color: #32533d;
 }
-
-.midwife-container:nth-child(2n) {
-  background-color: #d1c2b5;
-}
-
 @font-face {
   font-family: "Ogg";
   font-display: auto;

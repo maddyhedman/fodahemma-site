@@ -10,7 +10,7 @@ const HomeComponent = ({ home }) => {
     <div className="bg-green py-10 h-screen">
       <Container>
         <main className="flex justify-center flex-col relative items-center pt-28">
-          <div className="w-[20rem]">
+          <div className="w-[50rem]">
             <Image src={babyfeet} />
           </div>
           <h1 className="w-[40rem] absolute text-5xl font-serif text-white">
@@ -18,9 +18,11 @@ const HomeComponent = ({ home }) => {
           </h1>
           <div className="flex justify-between w-35">
             <Button
+              href="/barnmorskor"
               className="mr-10"
               homeButtonTitle={homePage.ctaLeft.fields.title}
             />
+
             <Button homeButtonTitle={homePage.ctaRight.fields.title} />
           </div>
         </main>
