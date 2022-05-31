@@ -20,7 +20,7 @@ a {
 }
 .midwife-container:nth-child(3n-2) {
   background-color: #32533d;
-  border-top-left-radius: 3rem;
+  border-top-left-radius: 8rem;
   color: #d1c2b5;
 }
 .midwife-container:nth-child(3n-1) {
@@ -29,7 +29,7 @@ a {
 }
 .midwife-container:nth-child(3n) {
   background-color: #9ba2ff;
-  border-bottom-right-radius: 3rem;
+  border-bottom-right-radius: 8rem;
   color: #32533d;
 }
 @font-face {
