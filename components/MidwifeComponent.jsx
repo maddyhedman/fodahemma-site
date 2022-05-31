@@ -1,5 +1,6 @@
+import Container from "./Container";
+
 const MidwifeComponent = ({ midwife }) => {
-  console.log(midwife);
   return (
     <div>
       <h1 className="font-serif text-purple text-center">{midwife.title}</h1>

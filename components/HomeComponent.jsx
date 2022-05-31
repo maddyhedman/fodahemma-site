@@ -1,11 +1,11 @@
 import Container from "./Container";
 import Image from "next/image";
-import babyfeet from "../public/images/babyfeet.jpg";
 import Button from "../components/Button";
 
 const HomeComponent = ({ home }) => {
   const homePage = home[0].fields;
-  console.log("ctaLeft:", homePage.ctaLeft.fields.title);
+  const image = 'https:' + homePage.image.fields.file.url;
+  console.log(image);
   return (
     <div className="bg-green py-10 h-screen">
       <Container>
@@ -13,12 +13,11 @@ const HomeComponent = ({ home }) => {
           <div className="w-[50rem]">
             <Image src={babyfeet} />
           </div>
-          <h1 className="w-[40rem] absolute text-5xl font-serif text-white">
+          <h1 className="w-[40rem] absolute text-5xl font-serif text-white leading-[76px] mt-24">
             {homePage.title}
           </h1>
-          <div className="flex justify-between w-35">
+          <div className="flex gap-10 mt-10">
             <Button
-              className="mr-10"
               homeButtonTitle={homePage.ctaLeft.fields.title}
             />
 
