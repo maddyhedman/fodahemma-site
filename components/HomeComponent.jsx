@@ -1,6 +1,7 @@
 import Container from "./Container";
 import Image from "next/image";
 import Button from "../components/Button";
+import Link from "next/link";
 
 const HomeComponent = ({ home }) => {
   const homePage = home[0].fields;
@@ -17,11 +18,18 @@ const HomeComponent = ({ home }) => {
             {homePage.title}
           </h1>
           <div className="flex gap-10 mt-10">
-            <Button
-              homeButtonTitle={homePage.ctaLeft.fields.title}
-            />
-
-            <Button homeButtonTitle={homePage.ctaRight.fields.title} />
+            <Link href="/barnmorskor">
+              <a>
+                <Button
+                  homeButtonTitle={homePage.ctaLeft.fields.title}
+                />
+              </a>
+            </Link>
+            <Link href="qanda">
+              <a>
+                <Button homeButtonTitle={homePage.ctaRight.fields.title} />
+              </a>
+            </Link>
           </div>
         </main>
       </Container>
