@@ -12,10 +12,10 @@ const MidwifeComponent = ({ midwife }) => {
           {midwife &&
             midwife?.barnmorska?.map((midwife, index) => (
               <div key={index} className="midwife-container h-72">
-                <h1 className="font-serif  text-center">
+                <h1 className="font-serif  text-center pt-20 text-2xl">
                   {midwife.fields.name}
                 </h1>
-                <p className="font-serif text-center">
+                <p className="font-serif text-center ">
                   {" "}
                   {midwife.fields.website}
                 </p>
