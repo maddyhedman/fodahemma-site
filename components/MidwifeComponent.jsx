@@ -17,7 +17,7 @@ const MidwifeComponent = ({ midwife }) => {
                 </h1>
                 <p className="font-serif text-center ">
                   {" "}
-                  {midwife.fields.phone}
+                  +{midwife.fields.phone}
                 </p>
                 <p className="font-serif text-center ">
                   {" "}
