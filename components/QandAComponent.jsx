@@ -14,7 +14,7 @@ const QandAComponent = ({ qanda }) => {
                 <h1 className="font-serif text-3xl text-white">
                   {qanda.fields.question}
                 </h1>
-                <p className="text-[#D1C2B5]">{qanda.fields.answer}</p>
+                <p className="text-[#D1C2B5] mt-10">{qanda.fields.answer}</p>
               </div>
             ))}
         </div>
