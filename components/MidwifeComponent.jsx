@@ -27,10 +27,6 @@ const MidwifeComponent = ({ midwife }) => {
                   {" "}
                   {midwife.fields.email}
                 </p>
-                <p className="font-serif  text-center">
-                  {" "}
-                  {midwife.fields.county1}
-                </p>
               </div>
             ))}
         </div>
