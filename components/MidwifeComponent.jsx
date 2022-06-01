@@ -1,7 +1,6 @@
 import Container from "./Container";
 
 const MidwifeComponent = ({ midwife }) => {
-  console.log("county", midwife.barnmorska[0].fields);
   return (
     <Container>
       <div className="">
@@ -27,6 +26,13 @@ const MidwifeComponent = ({ midwife }) => {
                   {" "}
                   {midwife.fields.email}
                 </p>
+               
+                  <p>
+                    {" "}
+                    {midwife.fields.county}
+                  </p>
+                
+                
               </div>
             ))}
         </div>
