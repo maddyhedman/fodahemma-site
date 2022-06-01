@@ -15,10 +15,12 @@ const MidwifeComponent = ({ midwife }) => {
                 <h1 className="font-serif  text-center pt-20 text-2xl">
                   {midwife.fields.name}
                 </h1>
-                <p className="font-serif text-center ">
-                  {" "}
-                  +{midwife.fields.phone}
-                </p>
+                {midwife.fields.phone && (
+                  <p className="font-serif text-center ">
+                    {" "}
+                    +{midwife.fields.phone}
+                  </p>
+                )}
                 <p className="font-serif text-center ">
                   {" "}
                   {midwife.fields.website}
