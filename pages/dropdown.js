@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import DropDown from "../components/DropDComponent";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const client = createClient({

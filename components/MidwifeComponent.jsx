@@ -33,6 +33,7 @@ const MidwifeComponent = ({ midwife }) => {
                     className="flex gap-2 items-center"
                     href={"http://" + midwife.fields.website}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     {" "}
                     <TbWorld />
