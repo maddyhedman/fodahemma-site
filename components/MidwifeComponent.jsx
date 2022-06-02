@@ -19,14 +19,17 @@ const MidwifeComponent = ({ midwife }) => {
                 </h1>
 
                 {midwife.fields.phone && (
-                  <a className="font-serif flex" href="tel:+46">
+                  <a
+                    className="font-serif flex items-center gap-2"
+                    href="tel:+46"
+                  >
                     {" "}
                     <TbPhone /> +46 {midwife.fields.phone}
                   </a>
                 )}
                 {midwife.fields.website && (
                   <a
-                    className="font-serif flex"
+                    className="font-serif flex gap-2 items-center"
                     href={"http://" + midwife.fields.website}
                     target="_blank"
                   >
@@ -36,13 +39,13 @@ const MidwifeComponent = ({ midwife }) => {
                   </a>
                 )}
                 {midwife.fields.email && (
-                  <p className="font-serif flex">
+                  <p className="font-serif flex items-center gap-2">
                     {" "}
                     <TbMail />
                     {midwife.fields.email}
                   </p>
                 )}
-                <p className="font-serif"> {midwife.fields.county}</p>
+                <p className="font-serif gap-2"> {midwife.fields.county}</p>
               </div>
             ))}
         </div>
