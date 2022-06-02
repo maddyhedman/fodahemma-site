@@ -2,22 +2,25 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 const Dropwdown = () => {
+  const router = useRouter();
+
   return (
     <Menu
       as="div"
-      className="relative z-40 mr-10 bg-black text-right lg:hidden
-      "
+      className="ml-3 relative lg:hidden"
     >
       {({ open }) => (
-        <>
+        <div className="">
           <div>
-            <Menu.Button className="inline-flex w-full justify-center text-lg ">
+            <Menu.Button className="inline-flex justify-center items-center text-lg">
               {open ? <AiOutlineClose /> : <AiOutlineMenu />}
             </Menu.Button>
           </div>
@@ -32,25 +35,24 @@ const Dropwdown = () => {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items
-              className="text-l absolute right-0 mt-2 min-h-screen w-32 origin-top-right bg-black focus:outline-none
-        "
+              className="text-xl absolute right-0 w-48 rounded-md shadow-lg bg-green ring-1 ring-[#000000] ring-opacity-5 focus:outline-none pr-6 text-right"
             >
-              <div className="mr-5 inline-flex flex-col gap-1 py-1 font-normal">
-                <Menu.Item>
-                  <p>
-                    <Link href="/about">Barnmorskor</Link>
+              <div className="bg-green inline-flex flex-col gap-1 py-10  font-normal  h-44">
+                <Menu.Item className={`hover_effect ${router.pathname === "/barnmorskor" ? "text-beige" : ""}`}>
+                  <p>   
+                    <Link href="/barnmorskor">Barnmorskor</Link>  
                   </p>
                 </Menu.Item>
 
-                <Menu.Item>
+                <Menu.Item className={`hover_effect ${router.pathname === "/qanda" ? "text-beige" : ""}`}>
                   <p>
-                    <Link href="/case">Q&A</Link>
+                    <Link href="/qanda">Q&A</Link>
                   </p>
                 </Menu.Item>
               </div>
             </Menu.Items>
           </Transition>
-        </>
+        </div>
       )}
     </Menu>
   )
