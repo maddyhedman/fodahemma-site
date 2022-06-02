@@ -3,7 +3,7 @@ import Container from "./Container";
 const QandAComponent = ({ qanda }) => {
 
   return (
-    <div className="bg-green md:pt-10 pb-5 h-screen">
+    <div className="bg-green md:pt-10 pb-5 md:h-screen">
       <Container>
         <h1 className="font-serif md:text-5xl text-3xl text-white text-center">
           {qanda.title}
