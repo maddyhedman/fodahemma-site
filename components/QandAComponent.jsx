@@ -8,7 +8,7 @@ const QandAComponent = ({ qanda }) => {
         <h1 className="font-serif text-6xl text-white text-center">
           {qanda?.title}
         </h1>
-        <div className="grid grid-cols-2 gap-x-20 gap-y-10 py-20">
+        <div className="grid md:grid-cols-2 gap-x-20 gap-y-10 py-20">
           {qanda &&
             qanda?.qAndA?.map((qanda, index) => (
               <div key={index}>
