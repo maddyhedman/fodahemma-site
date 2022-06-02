@@ -20,13 +20,19 @@ const MidwifeComponent = ({ midwife }) => {
                     +46{midwife.fields.phone}
                   </a>
                 )}
-                <a className="font-serif" href="  {midwife.fields.website}">
+
+                <a
+                  className="font-serif"
+                  href={"http://" + midwife.fields.website}
+                  target="_blank"
+                >
                   {" "}
                   {midwife.fields.website}
                 </a>
+
+                <p>{midwife.fields.website}</p>
                 <p className="font-serif"> {midwife.fields.email}</p>
                 <p className="font-serif"> {midwife.fields.county}</p>
-
               </div>
             ))}
         </div>
