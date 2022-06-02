@@ -1,11 +1,12 @@
 import Container from "./Container";
 
 const QandAComponent = ({ qanda }) => {
+
   return (
     <div className="bg-green h-screen py-10">
       <Container>
         <h1 className="font-serif text-6xl text-white text-center">
-          {qanda.title}
+          {qanda?.title}
         </h1>
         <div className="grid grid-cols-2 gap-x-20 gap-y-10 py-20">
           {qanda &&

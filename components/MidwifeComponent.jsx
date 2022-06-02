@@ -4,6 +4,7 @@ import { TbWorld } from "react-icons/tb";
 import { TbMail } from "react-icons/tb";
 import { MdOutlinePlace } from "react-icons/md";
 
+
 const MidwifeComponent = ({ midwife }) => {
   return (
     <Container>
@@ -14,6 +15,7 @@ const MidwifeComponent = ({ midwife }) => {
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-x-5 gap-y-5  md:py-20 py-5 md:mb-36  ">
           {midwife &&
             midwife?.barnmorska?.map((midwife, index) => (
+
               <div
                 key={index}
                 className="midwife-container flex flex-col items-center h-80 md:w-84 md:px-20 justify-center"
