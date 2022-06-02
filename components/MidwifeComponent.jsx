@@ -1,35 +1,59 @@
 import Container from "./Container";
-import Image from "next/image";
-import purple from "../public/images/purple.png"
+import { TbPhone } from "react-icons/tb";
+import { TbWorld } from "react-icons/tb";
+import { TbMail } from "react-icons/tb";
+import { MdOutlinePlace } from "react-icons/md";
+
 
 const MidwifeComponent = ({ midwife }) => {
   return (
     <Container>
       <div className="">
-        <h1 className="font-serif text-purple text-center text-5xl pt-10">
+        <h1 className="font-serif text-black text-center text-5xl md:pt-10 pt-6">
           {midwife.title}
         </h1>
-        <div className="grid lg:grid-cols-3 gap-x-5 gap-y-5 py-20  md:grid-cols-2 mb-36">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-x-5 gap-y-5  md:py-20 py-5 md:mb-36  ">
           {midwife &&
             midwife?.barnmorska?.map((midwife, index) => (
-              <div key={index} className={"midwife-container h-80 pt-20 px-10"}>
-                <h1 className="font-serif text-2xl">
+
+              <div
+                key={index}
+                className="midwife-container flex flex-col items-center h-80 md:w-84 md:px-20 justify-center"
+              >
+                <h2 className="font-serif  text-2xl pb-5 break-normal text-center">
                   {midwife.fields.name}
-                </h1>
-        
+                </h2>
+
                 {midwife.fields.phone && (
-                  <a className="font-serif" href="tel:+46">
+                  <a className="flex items-center gap-2" href="tel:+46">
                     {" "}
-                    +46{midwife.fields.phone}
+                    <TbPhone /> +46 {midwife.fields.phone}
                   </a>
                 )}
-                <a className="font-serif" href="  {midwife.fields.website}">
-                  {" "}
-                  {midwife.fields.website}
-                </a>
-                <p className="font-serif"> {midwife.fields.email}</p>
-                <p className="font-serif"> {midwife.fields.county}</p>
-
+                {midwife.fields.website && (
+                  <a
+                    className="flex gap-2 items-center"
+                    href={"http://" + midwife.fields.website}
+                    target="_blank"
+                  >
+                    {" "}
+                    <TbWorld />
+                    {midwife.fields.website}
+                  </a>
+                )}
+                {midwife.fields.email && (
+                  <p className="flex items-center gap-2">
+                    {" "}
+                    <TbMail />
+                    {midwife.fields.email}
+                  </p>
+                )}
+                {midwife.fields.county && (
+                  <p className="font-serif flex items-center gap-2 ">
+                    <MdOutlinePlace />
+                    {midwife.fields.county}
+                  </p>
+                )}
               </div>
             ))}
         </div>
