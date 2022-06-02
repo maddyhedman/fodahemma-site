@@ -16,9 +16,15 @@ const MidwifeComponent = ({ midwife }) => {
                   {midwife.fields.name}
                 </h1>
                 {midwife.fields.phone && (
-                  <p className="font-serif"> +{midwife.fields.phone}</p>
+                  <a className="font-serif" href="tel:+46">
+                    {" "}
+                    +46{midwife.fields.phone}
+                  </a>
                 )}
-                <p className="font-serif"> {midwife.fields.website}</p>
+                <a className="font-serif" href="  {midwife.fields.website}">
+                  {" "}
+                  {midwife.fields.website}
+                </a>
                 <p className="font-serif"> {midwife.fields.email}</p>
                 <p className="font-serif"> {midwife.fields.county}</p>
               </div>
