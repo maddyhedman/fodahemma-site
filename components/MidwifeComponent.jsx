@@ -1,37 +1,47 @@
 import Container from "./Container";
+import { TbPhone } from "react-icons/tb";
+import { TbWorld } from "react-icons/tb";
+import { TbMail } from "react-icons/tb";
 
 const MidwifeComponent = ({ midwife }) => {
   return (
     <Container>
       <div className="">
-        <h1 className="font-serif text-purple text-center text-5xl pt-10">
+        <h1 className="font-serif text-black text-center text-5xl pt-10">
           {midwife.title}
         </h1>
         <div className="grid lg:grid-cols-3 gap-x-5 gap-y-5 py-20  md:grid-cols-2 mb-36">
           {midwife &&
             midwife?.barnmorska?.map((midwife, index) => (
-              <div key={index} className="midwife-container h-72 px-10">
-                <h1 className="font-serif pt-20 text-2xl">
+              <div key={index} className="midwife-container h-80 w-84 px-10">
+                <h1 className="font-serif pt-20 text-2xl pb-5">
                   {midwife.fields.name}
                 </h1>
+
                 {midwife.fields.phone && (
-                  <a className="font-serif" href="tel:+46">
+                  <a className="font-serif flex" href="tel:+46">
                     {" "}
-                    +46{midwife.fields.phone}
+                    <TbPhone /> +46 {midwife.fields.phone}
                   </a>
                 )}
-
-                <a
-                  className="font-serif"
-                  href={"http://" + midwife.fields.website}
-                  target="_blank"
-                >
-                  {" "}
-                  {midwife.fields.website}
-                </a>
-
-                <p>{midwife.fields.website}</p>
-                <p className="font-serif"> {midwife.fields.email}</p>
+                {midwife.fields.website && (
+                  <a
+                    className="font-serif flex"
+                    href={"http://" + midwife.fields.website}
+                    target="_blank"
+                  >
+                    {" "}
+                    <TbWorld />
+                    {midwife.fields.website}
+                  </a>
+                )}
+                {midwife.fields.email && (
+                  <p className="font-serif flex">
+                    {" "}
+                    <TbMail />
+                    {midwife.fields.email}
+                  </p>
+                )}
                 <p className="font-serif"> {midwife.fields.county}</p>
               </div>
             ))}
