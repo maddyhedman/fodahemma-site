@@ -2,12 +2,16 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 const Dropwdown = () => {
+  const router = useRouter();
+
   return (
     <Menu
       as="div"
@@ -34,13 +38,13 @@ const Dropwdown = () => {
               className="text-xl absolute right-0 w-48 rounded-md shadow-lg bg-green ring-1 ring-[#000000] ring-opacity-5 focus:outline-none pr-6 text-right"
             >
               <div className="bg-green inline-flex flex-col gap-1 py-10  font-normal  h-44">
-                <Menu.Item className="hover_effect">
+                <Menu.Item className={`hover_effect ${router.pathname === "/barnmorskor" ? "text-beige" : ""}`}>
                   <p>   
                     <Link href="/barnmorskor">Barnmorskor</Link>  
                   </p>
                 </Menu.Item>
 
-                <Menu.Item className="hover_effect">
+                <Menu.Item className={`hover_effect ${router.pathname === "/qanda" ? "text-beige" : ""}`}>
                   <p>
                     <Link href="/qanda">Q&A</Link>
                   </p>
