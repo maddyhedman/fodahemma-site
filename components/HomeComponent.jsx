@@ -11,13 +11,15 @@ const HomeComponent = ({ home }) => {
     <div className="bg-green py-10 h-screen">
       <Container>
         <main className="flex justify-center flex-col relative items-center">
-          <div className="w-[20rem]">
+          <div className="w-3/4 lg:w-1/4 md:w-1/3">
             <Image src={image} height={1600} width={1000} />
           </div>
-          <h1 className="w-[40rem] absolute text-5xl font-serif text-white leading-[76px] mt-24">
+        
+          <h1 className="md:w-3/4 text-center absolute md:text-5xl text-3xl font-serif text-white lg:leading-[76px] -mt-72">
             {homePage.title}
           </h1>
-          <div className="flex gap-10 mt-10">
+        
+          <div className="flex gap-10 mt-10 flex-wrap justify-center">
             <Link href="/barnmorskor">
               <a>
                 <Button homeButtonTitle={homePage.ctaLeft.fields.title} />
