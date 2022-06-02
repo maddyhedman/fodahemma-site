@@ -7,8 +7,8 @@ const NavBar = () => {
     <div className="bg-green h-28 text-white py-10">
       <Container>
         <nav className="grid grid-cols-2">
-          <div>
-            <h1 className="text-3xl font-serif">
+          <div className="">
+            <h1 className="md:text-3xl text-xl font-serif">
               <Link href="/">Föda Hemma</Link>
             </h1>
           </div>
@@ -24,7 +24,8 @@ const NavBar = () => {
               <Dropwdown />
             </div>
         </nav>
-      </Container>
+      </Container> 
+     
     </div>
   );
 };

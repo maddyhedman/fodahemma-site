@@ -9,7 +9,7 @@ const MidwifeComponent = ({ midwife }) => {
   return (
     <Container>
       <div className="">
-        <h1 className="font-serif text-black text-center text-5xl md:pt-10 pt-6">
+        <h1 className="font-serif text-black text-center md:text-5xl text-3xl md:pt-10 pt-6">
           {midwife.title}
         </h1>
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-x-5 gap-y-5  md:py-20 py-5 md:mb-36  ">
