@@ -8,15 +8,15 @@ const MidwifeComponent = ({ midwife }) => {
   return (
     <Container>
       <div className="">
-        <h1 className="font-serif text-black text-center text-5xl pt-10">
+        <h1 className="font-serif text-black text-center text-5xl md:pt-10 pt-6">
           {midwife.title}
         </h1>
-        <div className="grid lg:grid-cols-3 gap-x-5 gap-y-5 py-20  md:grid-cols-2 mb-36  ">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-x-5 gap-y-5  md:py-20 py-5 md:mb-36  ">
           {midwife &&
             midwife?.barnmorska?.map((midwife, index) => (
               <div
                 key={index}
-                className="midwife-container flex flex-col items-center h-80 w-84 px-20 justify-center"
+                className="midwife-container flex flex-col items-center h-80 md:w-84 md:px-20 justify-center"
               >
                 <h2 className="font-serif  text-2xl pb-5 break-normal text-center">
                   {midwife.fields.name}
